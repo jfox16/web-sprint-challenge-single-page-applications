@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 100px;
 }
 
 .Pizza label {
@@ -22,12 +23,16 @@
   margin-bottom: 3px;
 }
 
-.Pizza input[type=text], select {
+.Pizza input[type=text], select, textarea {
   box-sizing: border-box;
   padding: 5px;
   border: 1px solid hsl(0, 0%, 80%);
   border-radius: 4px;
   width: 250px;
+}
+
+.Pizza textarea {
+  width: 300px;
 }
 
 #submit-btn {
@@ -39,6 +44,7 @@
   padding: 10px 40px;
   margin-top: 20px;
   cursor: pointer;
+  box-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.5);
 }
 
 .Pizza .error {

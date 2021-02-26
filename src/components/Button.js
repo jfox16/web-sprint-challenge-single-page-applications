@@ -7,9 +7,9 @@ const Button = (props) => {
   const { children, onClick } = props;
 
   return (
-    <div className='Button' onClick={onClick}>
+    <button className='Button' onClick={onClick}>
       {children}
-    </div>
+    </button>
   )
 }
 

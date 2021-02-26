@@ -5,11 +5,13 @@ import './Pizza.css';
 import Header from 'components/Header';
 
 import validatePizza from 'functions/validatePizza';
+import postPizza from 'functions/postPizza';
 
 const initialFormData = {
   name: '',
   size: 'md',
   toppings: [],
+  specialInstructions: '',
 };
 
 const sizeOptions = [
@@ -41,7 +43,7 @@ const Pizza = () => {
   const [ errorMessage, setErrorMessage ] = useState(null);
 
   useEffect(() => {
-    console.log(formData);
+    // console.log(formData);
   }, [ formData ]);
 
   const handleInputChange = (e) => {
@@ -68,9 +70,12 @@ const Pizza = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setErrorMessage(null);
+
     validatePizza(formData)
     .then(res => {
-      console.log(res);
+      postPizza(formData)
+      .then(res => console.log('success!', res.data));
     })
     .catch(err => {
       console.log(err.message);
@@ -109,6 +114,11 @@ const Pizza = () => {
               {topping.name}
             </label>
           ))}
+
+          <label>
+            <span>Special Instructions</span>
+            <span><textarea name='specialInstructions' value={formData.specialInstructions || ''} onChange={handleInputChange} /></span>
+          </label>
 
           <button id='submit-btn'>All done!</button>
 
