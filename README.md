@@ -31,19 +31,26 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
-1. How would you explain form validation to someone who has never programmed before?
-1. In 1-2 sentences, define end to end testing.
+
+    useRouteMatch() can be used to determine if the current URL matches parameters in the same way that a Route does, except without having to actually use the Route component.
+
+2. How would you explain form validation to someone who has never programmed before?
+
+    When entering a form, some values aren't valid. Like your email has to be properly formatted, your password has to be at least 8 characters long. Form validation checks your inputs before they're sent to the server so you can immediately know which inputs needs to be changed.
+
+3. In 1-2 sentences, define end to end testing.
+
+    End-to-end testing is when you fire up the full version of an app and try to do real tasks with it. This is to make sure it behaves how it should in a real-world environment.
 
 ## Instructions
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: `git push origin <firstName-lastName>`
+- [x] Create a forked copy of this project
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: `git checkout -b <firstName-lastName>`
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [x] Push commits: `git push origin <firstName-lastName>`
 
 ### Task 2: Project Requirements
 
@@ -95,3 +102,7 @@ Follow these steps for completing your project.
 - [ ] Submit a pull request to merge `<firstName-lastName>` branch into the `main` branch (student's repo). **Please don't merge your own pull request**
 - [ ] Add your team lead as a reviewer on the pull request
 - [ ] Your team lead will count the project as complete after receiving your pull request
+
+## Credits
+
+- [Pizza Pic by Shourav Sheikh](https://unsplash.com/photos/a66sGfOnnqQ)
