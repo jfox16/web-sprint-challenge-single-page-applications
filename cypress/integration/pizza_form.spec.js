@@ -20,5 +20,26 @@ describe('Pizza Ordering Form', () => {
     .type('I want it burnt');
   });
 
+  const checkBoxes = () => cy.get('input[type=checkbox]');
+
+  it('can have multiple toppings selected', () => {
+    checkBoxes().should('exist')
+    .check();
+  });
+
+  const submitBtn = () => cy.get('button');
+
+  it('can be submitted and errors work', () => {
+    submitBtn().should('exist').click();
+    cy.contains('No name provided.');
+
+    nameInput().type('Jonathan Fox');
+    submitBtn().click();
+    cy.contains('Must choose at least 4 toppings.');
+
+    checkBoxes().check();
+    submitBtn().click();
+  });
+
 
 });
